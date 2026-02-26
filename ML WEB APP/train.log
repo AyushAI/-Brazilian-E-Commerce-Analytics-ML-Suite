@@ -1,0 +1,20 @@
+Loading dataset...
+Numerical features: ['purchased_approved', 'delivered_estimated', 'purchased_delivered', 'price', 'freight_value', 'product_weight_g', 'product_length_cm', 'product_height_cm', 'product_width_cm', 'payment_installments', 'payment_value', 'Recency', 'Monetary']
+Categorical features: ['payment_type']
+Splitting data...
+Training XGBoost Pipeline...
+Evaluating Model...
+Accuracy: 1.0000
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      9884
+           1       1.00      1.00      1.00      8222
+
+    accuracy                           1.00     18106
+   macro avg       1.00      1.00      1.00     18106
+weighted avg       1.00      1.00      1.00     18106
+
+Saving the pipeline to churn_pipeline.pkl...
+Saving feature metadata...
+Training complete! Model and metadata saved successfully.

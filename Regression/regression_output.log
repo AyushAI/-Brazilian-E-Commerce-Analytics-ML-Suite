@@ -1,0 +1,22 @@
+Loading data...
+Features : ['purchased_approved', 'delivered_estimated', 'purchased_delivered', 'price', 'freight_value', 'product_weight_g', 'product_length_cm', 'product_height_cm', 'product_width_cm', 'geolocation_lat', 'geolocation_lng', 'payment_installments', 'Recency', 'Monetary']
+Samples  : 90,528
+
+Training Linear Regression...
+  R²=1.0000  MAE=0.00  RMSE=0.00
+
+Training Ridge (CV)...
+  R²=1.0000  MAE=0.00  RMSE=0.00  best alpha = 0.0010
+
+Training Lasso (CV)...
+  R²=1.0000  MAE=0.01  RMSE=0.02  best alpha = 0.0010
+
+============================================================
+MODEL COMPARISON SUMMARY
+============================================================
+            Model  R²          MAE         RMSE
+Linear Regression 1.0 8.738899e-14 1.082797e-13
+       Ridge (CV) 1.0 2.216251e-06 4.360194e-06
+       Lasso (CV) 1.0 1.335233e-02 2.310356e-02
+
+✅  Best model: Linear Regression  (highest R²)

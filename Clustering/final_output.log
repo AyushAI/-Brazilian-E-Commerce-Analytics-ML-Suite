@@ -1,0 +1,25 @@
+Loading data...
+Features selected: ['Recency', 'Monetary', 'payment_value', 'price', 'freight_value']
+Data shape: (90528, 5)
+
+Calculating silhouette scores for k=2 to 10...
+k=2, Silhouette Score: 0.4874
+k=3, Silhouette Score: 0.3121
+k=4, Silhouette Score: 0.3172
+k=5, Silhouette Score: 0.3288
+k=6, Silhouette Score: 0.3155
+k=7, Silhouette Score: 0.2673
+k=8, Silhouette Score: 0.2738
+k=9, Silhouette Score: 0.2642
+k=10, Silhouette Score: 0.2643
+
+Optimal number of clusters based on highest silhouette score: 2
+Fitting KMeans with k=2...
+Performing PCA for 2D visualization...
+Saved cluster visualization to customer_clusters.png
+
+Cluster Summary (Mean values):
+            Recency    Monetary  payment_value       price  freight_value
+Cluster                                                                  
+0        235.155679  325.819871     325.819871  243.980415      32.992803
+1        239.940354   94.326852      94.326852   75.625884      17.479088
