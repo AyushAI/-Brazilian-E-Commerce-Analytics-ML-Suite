@@ -2,37 +2,18 @@
 
 An end-to-end Data Analytics & Machine Learning project built on the Brazilian E-Commerce Public Dataset by Olist.  
 
-This project covers:
-- Extensive Exploratory Data Analysis (EDA)
-- Statistical Hypothesis Testing (ANOVA, Chi-Square)
-- Machine Learning (Classification & Regression)
-- Clustering
-- NLP Sentiment Analysis
-- Time Series Forecasting (ARIMA, SARIMA, Prophet)
-- Streamlit Deployment (Interactive Web App)
-
 ---
 
-## 📌 Project Overview
+## 🗂 Database Schema
 
-This project aims to extract actionable business insights from Olist’s Brazilian e-commerce dataset and build predictive systems for:
+Below is the relational schema of the Olist dataset:
 
-- 🎯 Customer Churn Prediction (Classification)
-- 💰 Payment Value Prediction (Regression)
-- 🧠 Customer Review Sentiment Analysis (NLP)
-- 📈 Sales Forecasting (Time Series)
-- 👥 Customer Segmentation (Clustering)
+![Database Schema](images/db.png)
 
-The solution follows a structured end-to-end ML pipeline with proper statistical validation and model comparison.
-
----
-
-## 📂 Dataset
-
-**Source:** Olist Brazilian E-Commerce Dataset  
-Contains information about:
+The dataset includes interconnected tables:
 - Customers
 - Orders
+- Order Items
 - Payments
 - Reviews
 - Products
@@ -41,182 +22,158 @@ Contains information about:
 
 ---
 
+# 📌 Project Overview
+
+This project extracts actionable business insights and builds predictive ML systems for:
+
+- 🎯 Customer Churn Prediction
+- 💰 Payment Value Prediction
+- 🧠 Review Sentiment Analysis
+- 📈 Sales Forecasting
+- 👥 Customer Segmentation
+
+---
+
+# 🌐 Streamlit Application UI
+
+## 🖥️ Main Prediction Interface
+
+![Streamlit UI 1](images/ui1.png)
+
+Users can:
+- Input customer/order details
+- Predict churn probability
+- Predict payment value
+- Perform sentiment classification
+
+---
+
+## 📊 Forecasting & Analytics Dashboard
+
+![Streamlit UI 2](images/ui2.png)
+
+Includes:
+- Sales forecasting visualization
+- Sentiment distribution
+- Interactive charts
+- Business insight summaries
+
+---
+
 # 🔎 1. Exploratory Data Analysis (EDA)
 
-Performed extensive data exploration including:
-
-- Missing value analysis
-- Outlier detection
-- Distribution analysis
-- Correlation heatmaps
-- Category-level performance analysis
-- Time-based order trends
-- Revenue analysis by state and product category
+- Missing value treatment  
+- Outlier detection  
+- Revenue trend analysis  
+- Regional sales comparison  
+- Correlation heatmaps  
+- Category performance analysis  
 
 ---
 
 # 📊 2. Statistical Hypothesis Testing
 
-To validate business assumptions, the following tests were conducted:
-
 ### ✔ ANOVA
-- Compared payment values across multiple product categories
-- Tested revenue differences across regions
+- Revenue comparison across product categories  
+- Regional sales significance testing  
 
-### ✔ Chi-Square Test
-- Relationship between:
-  - Payment type & customer churn
-  - Review score & churn
-  - Delivery delay & customer satisfaction
-
-These tests provided statistical backing to business insights.
+### ✔ Chi-Square
+- Payment type vs churn  
+- Review score vs churn  
+- Delivery delay vs satisfaction  
 
 ---
 
 # 🤖 3. Machine Learning Models
 
-## 🎯 A. Classification – Customer Churn Prediction
+## 🎯 Classification – Customer Churn
 
-### Models Implemented:
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- K-Nearest Neighbors
-- Ridge / Lasso (where applicable)
-- Additional ensemble comparisons
+Models:
+- Logistic Regression  
+- Decision Tree  
+- Random Forest  
+- KNN  
 
-### Evaluation Metrics:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
-- ROC-AUC
-
-📌 Best model selected based on cross-validation and generalization performance.
+Evaluation:
+- Accuracy  
+- Precision  
+- Recall  
+- F1 Score  
+- ROC-AUC  
+- Confusion Matrix  
 
 ---
 
-## 💰 B. Regression – Payment Value Prediction
+## 💰 Regression – Payment Prediction
 
-### Models Implemented:
-- Linear Regression
-- Ridge Regression
-- Lasso Regression
-- Random Forest Regressor
+Models:
+- Linear Regression  
+- Ridge / Lasso  
+- Random Forest Regressor  
 
-### Evaluation Metrics:
-- MAE
-- RMSE
-- R² Score
-
-Feature importance visualization included for interpretability.
+Evaluation:
+- MAE  
+- RMSE  
+- R²  
 
 ---
 
-# 👥 4. Clustering Module
+# 👥 4. Clustering
 
-### Models:
-- KMeans
-- DBSCAN
-
-### Evaluation:
-- Silhouette Score
-- Cluster Visualization
-- Business Interpretation of Segments
-
-Used to identify:
-- High-value customers
-- Price-sensitive buyers
-- Repeat vs one-time customers
+- KMeans  
+- DBSCAN  
+- Silhouette Score  
+- Cluster visualization  
+- Business interpretation  
 
 ---
 
-# 🧠 5. NLP Module – Review Sentiment Analysis
+# 🧠 5. NLP – Sentiment Analysis
 
-## Text Preprocessing:
-- Lowercasing
-- Punctuation removal
-- Stopword removal
-- Tokenization
+Preprocessing:
+- Lowercasing  
+- Stopword removal  
+- Tokenization  
 
-## Text Representation:
-- TF-IDF
-- Optional: Word2Vec
+Vectorization:
+- TF-IDF  
+- Word2Vec (optional)  
 
-## Tasks:
-- Sentiment Classification
-- Top Keyword Extraction
-- Basic Named Entity Recognition
-
-### Evaluation:
-- Accuracy
-- Precision / Recall
-- F1 Score
-- Confusion Matrix
-
-### Outputs:
-- Sentiment distribution chart
-- Top keywords visualization
-- Extracted entity examples
+Outputs:
+- Sentiment distribution chart  
+- Top keywords  
+- Extracted entities  
 
 ---
 
-# 📈 6. Time Series Forecasting Module
+# 📈 6. Time Series Forecasting
 
-Forecasted future sales trends.
+Models:
+- ARIMA  
+- SARIMA  
+- Prophet  
 
-### Models:
-- ARIMA
-- SARIMA
-- Prophet
+Process:
+- Stationarity check (ADF)  
+- Differencing  
+- 6–12 month forecasting  
+- Model comparison  
 
-### Steps:
-- Stationarity check (ADF Test)
-- Differencing
-- Seasonal decomposition
-- Model comparison
-- 6–12 month forecasting
-
-### Evaluation:
-- MAE
-- RMSE
-
-Compared models to select best-performing forecasting approach.
+Evaluation:
+- MAE  
+- RMSE  
 
 ---
 
-# ⚙ 7. End-to-End ML Pipeline
+# ⚙ End-to-End ML Pipeline
 
-Implemented using:
+- Data preprocessing  
+- Feature engineering  
+- Train/Test split  
+- Cross-validation  
+- Model comparison  
+- Final model selection  
 
-- scikit-learn Pipelines
-- Cross-validation
-- Feature Engineering
-- Train/Test Split
-- Model Comparison
-- Final Model Selection
-
-Ensured reproducibility and modularity.
+Built using scikit-learn Pipelines.
 
 ---
-
-# 🌐 8. Streamlit Web Application
-
-Built an interactive Streamlit app for:
-
-- Customer churn prediction
-- Payment value prediction
-- Sentiment classification
-- Forecast visualization
-
-### Features:
-- User input form
-- Real-time prediction
-- Model loading via serialized objects
-- Interactive charts
-
-To run locally:
-
-```bash
-streamlit run app.py
